@@ -16,7 +16,8 @@ Within this dataset are a number of columns that capture metadata about each org
 - **ASK_AMT** —> Funding amount requested
 - **IS_SUCCESSFUL** —> Was the money used effectively
 
-
+---
+---
 ## **Overview of Analysis**
 > <sub>**AlphabetSoupCharity jupyter notebook file:** [AlphabetSoupCharity.ipynb](https://github.com/vzhang90/Neural_Network_Charity_Analysis/blob/main/AlphabetSoupCharity.ipynb)</sub>   
 > <sub>**AlphabetSoupCharity.h5 file:** [AlphabetSoupCharity.h5]()</sub>   
@@ -31,12 +32,13 @@ One way to use a neural network model is to create a classification algorithm th
 ---
 ### ***Preprocessing Data for a Neural Network Model***
 
->> The process of **model->fit->predict/transform** follows the same general steps across all of data science:  
->>*i. Decide on a model, and create a model instance  
->>ii. Split into training and testing sets, and preprocess the data  
->>iii. Train/fit the training data to the model  
->>iv. Use the model for predictions and transformations*
+>> *The process of **model->fit->predict/transform** follows the same general steps across all of data science:*   
+>>  <sub>&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;*i. Decide on a model, and create a model instance  
+>>  &ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;ii. Split into training and testing sets, and preprocess the data  
+>>  &ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;iii. Train/fit the training data to the model  
+>>  &ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;iv. Use the model for predictions and transformations*</sub>
 
+After importing the necessary dependencies to initialize [AlphabetSoupCharity.ipynb file](https://github.com/vzhang90/Neural_Network_Charity_Analysis/blob/main/AlphabetSoupCharity.ipynb), ***preprocess the data for a neural network model*** by:
 1. Read in the [charity_data.csv](https://github.com/vzhang90/Neural_Network_Charity_Analysis/blob/main/charity_data.csv) to a Pandas DataFrame
     - identifies variable(s) considered the target(s)
     - identifies variable(s) considered the feature(s)
@@ -53,8 +55,8 @@ One way to use a neural network model is to create a classification algorithm th
 12. Standardize numerical variables using Scikit-Learn’s `StandardScaler` class, then scale the data
 ---
 ### ***Compile, Train, and Evaluate the Model***
-Using knowledge of TensorFlow, this will now design a neural network, or deep learning model, to create a binary classification model that can predict if an Alphabet Soup–funded organization will be successful based on the features in the dataset. After considering the inputs to determine the number of neurons and layers in this model, this next portion of the code in [AlphabetSoupCharity.ipynb](https://github.com/vzhang90/Neural_Network_Charity_Analysis/blob/main/AlphabetSoupCharity.ipynb) will compile, train, and evaluate your binary classification model to calculate the model’s loss and accuracy.
-1. Create a neural network model by assigning the number of input features and nodes for each layer using Tensorflow Keras
+Using knowledge of **TensorFlow**, this will now design a neural network, or deep learning model, to create a binary classification model that can predict if an Alphabet Soup–funded organization will be successful based on the features in the dataset. After considering the inputs to determine the number of neurons and layers in this model, this next portion of the code in [AlphabetSoupCharity.ipynb](https://github.com/vzhang90/Neural_Network_Charity_Analysis/blob/main/AlphabetSoupCharity.ipynb) will compile, train, and evaluate your binary classification model to calculate the model’s loss and accuracy.
+1. Create a neural network model by assigning the number of input features and nodes for each layer using **Tensorflow Keras**
 2. Create the first hidden layer and choose an appropriate activation function
     - *if necessary, add a second hidden layer with an appropriate activation function*
 3. Create an output layer with an appropriate activation function
@@ -65,7 +67,7 @@ Using knowledge of TensorFlow, this will now design a neural network, or deep le
 8. Save and export your results to an HDF5 file, and name it [AlphabetSoupCharity.h5]()
 ---
 ### ***Optimize the Model***
-Using knowledge of TensorFlow, optimize this model in order to achieve a target predictive accuracy higher than 75%.
+Using knowledge of **TensorFlow**, optimize this model in order to achieve a ***target predictive accuracy higher than 75%***
 
 1. Create a new Jupyter Notebook file and name it [AlphabetSoupCharity_Optimization.ipynb](https://github.com/vzhang90/Neural_Network_Charity_Analysis/blob/main/AlphabetSoupCharity_Optimization.ipynb)
 2. Import your dependencies, and read in the [charity_data.csv](https://github.com/vzhang90/Neural_Network_Charity_Analysis/blob/main/charity_data.csv) to a Pandas DataFrame
@@ -82,6 +84,7 @@ Using knowledge of TensorFlow, optimize this model in order to achieve a target 
 5. Create a callback that saves the model's weights every 5 epochs
 6. Save and export your results to an HDF5 file, and name it [AlphabetSoupCharity_Optimization.h5]()
 ---
+---
 ## **Results**
 ***Data Preprocessing***
 - What variable(s) are considered the target(s) for your model?
@@ -92,8 +95,8 @@ Using knowledge of TensorFlow, optimize this model in order to achieve a target 
 - How many neurons, layers, and activation functions did you select for your neural network model, and why?
 - Were you able to achieve the target model performance?
 - What steps did you take to try and increase model performance?
-
-
+---
+---
 ## **Summary**
 Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation
 
