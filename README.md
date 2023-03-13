@@ -32,10 +32,10 @@ One way to use a neural network model is to create a classification algorithm th
 ### ***Preprocessing Data for a Neural Network Model***
 
 >> The process of **model->fit->predict/transform** follows the same general steps across all of data science:  
->>*1. Decide on a model, and create a model instance  
->>2. Split into training and testing sets, and preprocess the data  
->>3. Train/fit the training data to the model  
->>4. Use the model for predictions and transformations*
+>>*i. Decide on a model, and create a model instance  
+>>ii. Split into training and testing sets, and preprocess the data  
+>>iii. Train/fit the training data to the model  
+>>iv. Use the model for predictions and transformations*
 
 1. Read in the [charity_data.csv](https://github.com/vzhang90/Neural_Network_Charity_Analysis/blob/main/charity_data.csv) to a Pandas DataFrame
     - identifies variable(s) considered the target(s)
