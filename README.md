@@ -57,14 +57,18 @@ After importing the necessary dependencies to initialize [AlphabetSoupCharity.ip
 ### ***Compile, Train, and Evaluate the Model***
 Using knowledge of **TensorFlow**, this will now design a neural network, or deep learning model, to create a binary classification model that can predict if an Alphabet Soup–funded organization will be successful based on the features in the dataset. After considering the inputs to determine the number of neurons and layers in this model, this next portion of the code in [AlphabetSoupCharity.ipynb](https://github.com/vzhang90/Neural_Network_Charity_Analysis/blob/main/AlphabetSoupCharity.ipynb) will compile, train, and evaluate your binary classification model to calculate the model’s loss and accuracy.
 1. Create a neural network model by assigning the number of input features and nodes for each layer using **Tensorflow Keras**
-2. Create the first hidden layer and choose an appropriate activation function
-    - *if necessary, add a second hidden layer with an appropriate activation function*
-3. Create an output layer with an appropriate activation function
-4. Check the structure of the model
-5. Compile and train the model
-6. Create a callback that saves the model's weights every 5 epochs
-7. Evaluate the model using the test data to determine the loss and accuracy
-8. Save and export your results to an HDF5 file, and name it [AlphabetSoupCharity.h5]()
+2. Create the first hidden layer  
+    - `Keras` Dense class  
+    - number of input features equal to the number of variables in feature DataFrame
+    - choose an appropriate activation function
+3. Add second hidden layer with `relu activation` function 
+    - to identify nonlinear characteristics from the input values
+4. Create output layer with `sigmoid` activation function
+5. Check the structure of the model
+6. Compile and train the model
+7. Create a callback that saves the model's weights every 5 epochs
+8. Evaluate the model using the test data to determine the loss and accuracy
+9. Save and export your results to an HDF5 file, and name it [AlphabetSoupCharity.h5]()
 ---
 ### ***Optimize the Model***
 Using knowledge of **TensorFlow**, optimize this model in order to achieve a ***target predictive accuracy higher than 75%***
@@ -112,3 +116,5 @@ The two biggest ***disadvantages*** to using a neural network model are:
         - *overfitting occurs when a model gives undue importance to patterns within a particular dataset that are not found in other, similar datasets*
     
 However, both of the disadvantages can be mitigated and accounted for.
+
+The neural network model was able to predict the classification of a new data point with an accuracy of 0.9.
