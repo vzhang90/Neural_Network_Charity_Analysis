@@ -61,14 +61,17 @@ Using knowledge of **TensorFlow**, this will now design a neural network, or dee
     - `Keras` Dense class  
     - number of input features equal to the number of variables in feature DataFrame
     - choose an appropriate activation function
-3. Add second hidden layer with `relu activation` function 
-    - to identify nonlinear characteristics from the input values
+3. Add second hidden layer with `relu activation` function to identify nonlinear characteristics from the input values
 4. Create output layer with `sigmoid` activation function
-5. Check the structure of the model
-6. Compile and train the model
-7. Create a callback that saves the model's weights every 5 epochs
-8. Evaluate the model using the test data to determine the loss and accuracy
-9. Save and export your results to an HDF5 file, and name it [AlphabetSoupCharity.h5]()
+5. Check the structure of the model with `summary()` function
+6. Compile the model to define the loss and accuracy metrics
+    - using `binary_crossentropy` loss function, `adam` optimizer, and `accuracy` metrics
+        - *same parameters as this neural network to use model as a binary classifier*
+7. Train the model with `fit` function
+    - *Depending on the complexity of the dataset, we may opt to increase the number of epochs to allow for the deep learning model more opportunities to optimize the weight coefficients*
+8. Create a callback that saves the model's weights every 5 epochs
+9. Evaluate the model using the test data to determine the loss and accuracy
+10. Save and export your results to an HDF5 file, and name it [AlphabetSoupCharity.h5]()
 ---
 ### ***Optimize the Model***
 Using knowledge of **TensorFlow**, optimize this model in order to achieve a ***target predictive accuracy higher than 75%***
