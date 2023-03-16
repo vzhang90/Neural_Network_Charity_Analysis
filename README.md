@@ -68,10 +68,10 @@ Using knowledge of **TensorFlow**, this will now design a neural network, or dee
     - using `binary_crossentropy` loss function, `adam` optimizer, and `accuracy` metrics
         - *same parameters as this neural network to use model as a binary classifier*
 7. Train the model with `fit` function
-    - *Depending on the complexity of the dataset, we may opt to increase the number of epochs to allow for the deep learning model more opportunities to optimize the weight coefficients*
 8. Create a callback that saves the model's weights every 5 epochs
-9. Evaluate the model using the test data to determine the loss and accuracy
-10. Save and export your results to an HDF5 file, and name it [AlphabetSoupCharity.h5]()
+9. Evaluate the model using the test data with `evaluate()` function 
+    - to evaluate the model's performance by testing its predictive capabilities (loss and accuracy) on our testing dataset
+10. Save and export your results to an HDF5 file, and name it [AlphabetSoupCharity.h5](https://github.com/vzhang90/Neural_Network_Charity_Analysis/blob/main/AlphabetSoupCharity.h5)
 ---
 ### ***Optimize the Model***
 Using knowledge of **TensorFlow**, optimize this model in order to achieve a ***target predictive accuracy higher than 75%***
@@ -89,24 +89,25 @@ Using knowledge of **TensorFlow**, optimize this model in order to achieve a ***
     - *Using different activation functions for the hidden layers*
     - *Adding or reducing the number of epochs to the training regimen*
 5. Create a callback that saves the model's weights every 5 epochs
-6. Save and export your results to an HDF5 file, and name it [AlphabetSoupCharity_Optimization.h5]()
+6. Save and export your results to an HDF5 file, and name it [AlphabetSoupCharity_Optimization.h5](https://github.com/vzhang90/Neural_Network_Charity_Analysis/blob/main/AlphabetSoupCharity_Optimization.h5)
 ---
 ---
 ## **Results**
 ***Data Preprocessing***
-- What variable(s) are considered the target(s) for your model?
-- What variable(s) are considered to be the features for your model?
-- What variable(s) are neither targets nor features, and should be removed from the input data?
+- The `IS_SUCCESSFUL` column is the variable considered to be the target of this model
+- The `APPLICATION_TYPE`, `AFFILIATION`, `CLASSIFICATION`, `USE_CASE`, `ORGANIZATION`, `STATUS`, `INCOME_AMT`, `SPECIAL_CONSIDERATIONS`, and `ASK_AMT` columns are the variables considered to be features of this model
+- `EIN` & `NAME` identification columns are neither targets nor variables, so are removed from the input data
 
 ***Compiling, Training, and Evaluating the Model***
-- How many neurons, layers, and activation functions did you select for your neural network model, and why?
-- Were you able to achieve the target model performance?
-- What steps did you take to try and increase model performance?
+- The first layer had 8 neurons with a `relu` activation function
+- The second layer had 5 neurons with a `relu` activation function
+- The outer layer had 1 neuron with a `sigmoid` activation function 
+
+- This model produced a fairly reliable classifier approximately 71.6% of the time.
+- To try and increase model performance depending on the complexity of the dataset, I opted to increase the number of neurons and epochs to allow for the deep learning model more opportunities to optimize the weight coefficients.
 ---
 ---
 ## **Summary**
-Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation
-
 There are a number of ***advantages*** to using a neural network instead of a traditional statistical or machine learning model
 - neural networks are effective at detecting complex, nonlinear relationships
 - neural networks have greater tolerance for messy data and can learn to ignore noisy characteristics in data
@@ -120,4 +121,4 @@ The two biggest ***disadvantages*** to using a neural network model are:
     
 However, both of the disadvantages can be mitigated and accounted for.
 
-The neural network model was able to predict the classification of a new data point with an accuracy of 0.9.
+The neural network deep learning model was able to predict whether applicants will be successful if funded by Alphabet Soup approximately 71.6% of the time. 
